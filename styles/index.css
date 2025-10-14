@@ -25,7 +25,6 @@ header.rolagem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 header a img {
@@ -128,19 +127,20 @@ header.rolagem .btn-entrar:hover {
 main .containers {
     width: 100%;
     min-height: 30rem;
+    margin-bottom: 5rem;
 }
 
 /* DEPOIMENTOS */
 
-.titulo-depoimentos {
+.titulos_containers {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
-.titulo-depoimentos h2 {
+.titulos_containers h2 {
   font-size: 1.7rem;
   color: var(--tertiary-color);
 }
@@ -238,6 +238,33 @@ main .containers {
   font-weight: 800;
 }
 
+.apoiadores-carl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .apoiadores-carl .box-icons-apoio {
+    display: flex;
+
+} */
+
+.apoiadores-carl .box-icons-apoio {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.box-icons-apoio img {
+    width: 12rem;
+    transition: 0.4s ease;
+}
+
+.box-icons-apoio img:hover {
+  transform: translateY(-7px);
+}
+
 /* RODAPÉ */
 
 .interface-footer {
@@ -268,7 +295,7 @@ footer .line-footer1 {
 .line-footer1 .btn-sociais {
   width: 50px;
   height: 50px;
-  margin-right: 7px;
+  margin-right: 9px;
   transition: 0.3s;
   text-decoration: none;
 }
@@ -278,7 +305,7 @@ footer .line-footer1 {
 }
 
 .line-footer1 .btn-sociais .bi {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text-color);
   transition: 0.3s;
 }
