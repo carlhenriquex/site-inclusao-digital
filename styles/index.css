@@ -130,6 +130,109 @@ main .containers {
     margin-bottom: 5rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 40px;
+  gap: 40px;
+}
+
+.left-box {
+  background-color: #6a29e9;
+  color: #fff;
+  width: 50%;
+  height: 25rem;
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-box h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.left-box p {
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-align: center;
+  max-width: 200px;
+}
+
+.btn:hover {
+  background-color: #00a0d1;
+}
+
+.right-box {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+.right-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.right-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.intro {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-text-color);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+  }
+}
+
 /* DEPOIMENTOS */
 
 .titulos_containers {
@@ -224,6 +327,56 @@ main .containers {
 .card-content h3.badge3 {
   color: #b25a2b;
   background: #ffe3d2;
+}
+
+.card-content h3.badge4 {
+  color: #2b9b5f;
+  background: #d2f8e3;
+}
+
+.card-content h3.badge5 {
+  color: #c95f2a;
+  background: #ffe8d6;
+}
+
+.card-content h3.badge6 {
+  color: #2b6cb0;
+  background: #d9ecff;
+}
+
+.card-content h3.badge7 {
+  color: #8b5cf6;
+  background: #ede9fe;
+}
+
+.card-content h3.badge8 {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.card-content h3.badge9 {
+  color: #059669;
+  background: #d1fae5;
+}
+
+.card-content h3.badge10 {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.card-content h3.badge11 {
+  color: #ca8a04;
+  background: #fef9c3;
+}
+
+.card-content h3.badge12 {
+  color: #14b8a6;
+  background: #ccfbf1;
+}
+
+.card-content h3.badge13 {
+  color: #9333ea;
+  background: #f3e8ff;
 }
 
 .card-content p {
