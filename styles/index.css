@@ -1,5 +1,28 @@
 @import url("global.css");
 
+.titulos_containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+
+.titulos_containers h2 {
+  font-size: 1.9rem;
+  color: var(--tertiary-color);
+}
+
+.titulos_containers h2 span {
+  color: var(--quaternary-color);
+}
+
+.titulos_containers p {
+  color: #6c6c6cd1;
+  padding-top: 1.3rem;
+}
+
 /* CABEÇALHO COM LOGO, MENU DE NAVEGAÇÃO E BOTAO DE ENTRAR */
 header {
   width: 100%;
@@ -124,6 +147,7 @@ main .containers {
   width: 100%;
   min-height: 30rem;
   padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 /* BANNER */
@@ -335,30 +359,63 @@ main .containers {
   }
 }
 
-/* BOLSISTAS */
+/* PROFESSORES */
 
-.titulos_containers {
+.professores {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
-  margin-bottom: 6rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.titulos_containers h2 {
-  font-size: 1.9rem;
+.professores .box_professor {
+  display: flex;
+  width: 1000px;
   color: var(--tertiary-color);
+  margin-bottom: 5rem;
 }
 
-.titulos_containers h2 span {
-  color: var(--quaternary-color);
+.professores .box_professor .text_professor {
+  padding: 1.5rem;
+  border-bottom-left-radius: 20px;
 }
 
-.titulos_containers p {
-  color: var(--tertiary-color);
-  padding-top: 1.3rem;
+.professores .prof1 {
+  border-bottom: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
 }
+
+.professores .prof2 {
+  border-bottom: 1px solid var(--secondary-color);
+  border-left: 1px solid var(--secondary-color);
+}
+
+.professores .box_professor .text_professor h3 {
+  font-size: 1.7rem;
+  padding-bottom: .5rem;
+}
+
+.professores .box_professor .text_professor h4 {
+  width: fit-content;
+  font-size: .85rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background-color: var(--quaternary-color);
+  color: var(--text-color);
+}
+
+.professores .box_professor .text_professor p {
+  font-size: .85rem;
+  padding-top: 1rem;
+  max-width: 90%;
+}
+
+.professores .box_professor img {
+  width: 17rem;
+}
+
+/* BOLSISTAS */
 
 .container_bolsistas {
   display: flex;
