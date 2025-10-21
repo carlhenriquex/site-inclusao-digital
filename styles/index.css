@@ -120,55 +120,35 @@ header.rolagem .btn-entrar:hover {
   color: var(--laranja-bg);
 }
 
-/* BANNER */
-
-.interface {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 4%;
-}
-
-.banner {
-  height: 90vh;
-  position: relative;
-}
-
-.banner .banner-container .banner-itens {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.banner .banner-itens img {
-  width: 100%;
-  height: 100%;
-  
-}
-
-.texto-banner {
-  position: absolute;
-  left: 7%;
-  top: 35%;
-  z-index: 1;
-  width: 60%;
-}
-
-.texto-banner h2 {
-  font-size: 3rem;
-}
-
-.texto-banner h2 span {
-  color: var(--quaternary-color);
-}
-
-.texto-banner p {
-  margin-bottom: 2rem;
-}
-
 main .containers {
   width: 100%;
   min-height: 30rem;
   padding-top: 8rem;
+}
+
+/* BANNER */
+
+.banner {
+  width: 100%;
+  min-height: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background: #0E34F6;
+  background: linear-gradient(90deg, rgb(41, 67, 233) 30%, rgb(0, 213, 255) 100%);
+}
+
+.banner .text-banner h1 {
+  font-size: 2.7rem;
+}
+
+.banner .text-banner h1 span {
+  color: var(--quaternary-color);
+}
+
+.banner img {
+  width: 50%;
 }
 
 .info {
@@ -355,7 +335,7 @@ main .containers {
   }
 }
 
-/* DEPOIMENTOS */
+/* BOLSISTAS */
 
 .titulos_containers {
   display: flex;
@@ -375,6 +355,18 @@ main .containers {
   color: var(--quaternary-color);
 }
 
+.titulos_containers p {
+  color: var(--tertiary-color);
+  padding-top: 1.3rem;
+}
+
+.container_bolsistas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-list {
   display: flex;
   align-items: center;
@@ -383,8 +375,7 @@ main .containers {
   flex-wrap: wrap;
   gap: 3rem;
   margin-inline: 4%;
-  margin-bottom: 3rem;
-  z-index: 1;
+  max-width: 80vw;
 }
 
 .card {
