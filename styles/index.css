@@ -413,6 +413,11 @@ main .containers {
 
 .professores .box_professor img {
   width: 17rem;
+  transition: 0.7s ease;
+}
+
+.professores .box_professor img:hover {
+  transform: translateY(-10px);
 }
 
 /* BOLSISTAS */
