@@ -571,7 +571,7 @@ main .containers {
   font-weight: 800;
 }
 
-.apoiadores-carl {
+.apoiadores {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -579,7 +579,7 @@ main .containers {
     margin-bottom: 10rem;
 }
 
-.apoiadores-carl .box-icons-apoio {
+.apoiadores .box-icons-apoio {
     display: flex;
     align-items: center;
     gap: 2rem;
