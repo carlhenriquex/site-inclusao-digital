@@ -418,10 +418,43 @@ main .containers {
 .professores .box_professor img {
   width: 17rem;
   transition: 0.7s ease;
+  object-fit: cover;
+  border-radius: 15px;
+  flex-shrink: 0; /* Para que a imagem não mude de tamanho */
 }
 
 .professores .box_professor img:hover {
   transform: translateY(-10px);
+}
+
+/* Redes sociais dos professores */
+.professores .social-icons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center; /* keeps SVG aligned with font icons */
+  gap: 1rem;
+}
+
+/* SVG icons */
+.professores .social-icons .social-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  transition:
+    transform 0.2s ease,
+    filter 0.3s ease;
+
+  /* Convert black to tertiary color */
+  filter: invert(8%) sepia(100%) saturate(2000%) hue-rotate(230deg)
+    brightness(20%) contrast(100%);
+}
+
+.professores .social-icons a:hover .social-icon {
+  transform: scale(1.2);
+
+  /* Convert black to primary color */
+  filter: invert(25%) sepia(90%) saturate(2000%) hue-rotate(250deg)
+    brightness(90%) contrast(90%);
 }
 
 /* BOLSISTAS */
