@@ -171,8 +171,12 @@ main .containers {
   color: var(--quaternary-color);
 }
 
+.banner .text-banner p {
+  max-width: 90%;
+}
+
 .banner img {
-  width: 50%;
+  width: 45%;
 }
 
 .info {
