@@ -440,7 +440,7 @@ main .containers {
 .professores .social-icons .btn-sociais .bi {
   font-size: 1.8rem;
   color: var(--tertiary-color);
-  transition: 0.3s;
+  transition: 0.5s;
   margin-right: 9px;
 }
 
@@ -533,8 +533,8 @@ main .containers {
 }
 
 .card-content h3.badge3 {
-  color: #b25a2b;
-  background: #ffe3d2;
+  color: #9333ea;
+  background: #f3e8ff;
 }
 
 .card-content h3.badge4 {
@@ -545,46 +545,6 @@ main .containers {
 .card-content h3.badge5 {
   color: #c95f2a;
   background: #ffe8d6;
-}
-
-.card-content h3.badge6 {
-  color: #2b6cb0;
-  background: #d9ecff;
-}
-
-.card-content h3.badge7 {
-  color: #8b5cf6;
-  background: #ede9fe;
-}
-
-.card-content h3.badge8 {
-  color: #dc2626;
-  background: #fee2e2;
-}
-
-.card-content h3.badge9 {
-  color: #059669;
-  background: #d1fae5;
-}
-
-.card-content h3.badge10 {
-  color: #2563eb;
-  background: #dbeafe;
-}
-
-.card-content h3.badge11 {
-  color: #ca8a04;
-  background: #fef9c3;
-}
-
-.card-content h3.badge12 {
-  color: #14b8a6;
-  background: #ccfbf1;
-}
-
-.card-content h3.badge13 {
-  color: #9333ea;
-  background: #f3e8ff;
 }
 
 .card-content p {
@@ -644,7 +604,7 @@ main .containers {
 .footer-column .btn-sociais .bi {
   font-size: 1.5rem;
   color: var(--text-color);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .footer-column .btn-sociais i:hover {
@@ -695,7 +655,7 @@ main .containers {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .footer-column ul li a:hover {
