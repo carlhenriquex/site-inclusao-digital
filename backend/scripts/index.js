@@ -43,15 +43,7 @@ const modalDescricao = document.getElementById('modal-descricao');
 const infos = {
 "Andryene Rodrigues": {
 curso: "Administração",
-descricao: "Apaixonada por gestão e inovação, Andryene atua na organização de projetos voltados à educação tecnológica."
-},
-"Carlos Henrique": {
-curso: "Design Gráfico",
-descricao: "Carlos combina criatividade e técnica para transformar ideias em identidades visuais marcantes."
-},
-"Glébson Silva": {
-curso: "Logística",
-descricao: "Glebson é especialista em otimização de processos e integração entre tecnologia e transporte."
+descricao: "Descrição em breve."
 },
 // ... adicione os outros nomes aqui
 };
