@@ -527,6 +527,11 @@ main .containers {
   background: #dde4ff;
 }
 
+.modal-content h4.badge1 {
+  color: #5370f0;
+  background: #dde4ff;
+}
+
 .card-content h3.badge2 {
   color: #b22485;
   background: #f7dff5;
