@@ -210,8 +210,13 @@ main .containers {
 }
 
 .info-card p {
-  font-size: .85rem;
+  font-size: .9rem;
   display: none;
+}
+
+.info-card p a {
+  color: #000;
+  background-color: #ffffff99;
 }
 
 .info-card.active {
