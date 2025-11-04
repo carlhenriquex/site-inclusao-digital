@@ -184,7 +184,6 @@ main .containers {
   max-width: 1300px;
   margin: 80px auto;
   padding: 0 20px;
-  font-family: "Poppins", sans-serif;
 }
 
 .artigos-relacionados-titulo {
@@ -214,7 +213,7 @@ main .containers {
 
 .artigo-relacionado-item:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(93, 0, 255, 0.15);
 }
 
 .artigo-relacionado-item:hover .artigo-relacionado-link {
@@ -231,6 +230,7 @@ main .containers {
 .artigo-relacionado-conteudo {
   padding: 20px;
   display: flex;
+  height: 12rem;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
@@ -262,7 +262,16 @@ main .containers {
   margin-bottom: 15px;
 }
 
+.artigo-relacionado-box-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .7rem;
+}
+
 .artigo-relacionado-link {
+  width: 93%;
   background: #f0e9ff;
   color: var(--primary-color);
   font-weight: 600;
