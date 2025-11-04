@@ -20,17 +20,6 @@ item.addEventListener("click", () => {
 }
 }
 
-// === ABRIR E FECHAR CARDS DO SECTION INFO (PROJETO, PARCERIA, BOLSISTAS) ===
-const cards = document.querySelectorAll('.info-card');
-const img = document.getElementById('info-img');
-cards.forEach(card => {
-card.addEventListener('click', () => {
-cards.forEach(c => c.classList.remove('active'));
-card.classList.add('active');
-img.src = `img/${card.id}.png`;
-});
-});
-
 // === ABRIR E FECHAR CARDS DOS BOLSISTAS ===
 const cards_ = document.querySelectorAll('.card');
 const modal = document.getElementById('modal-bolsista');
@@ -49,7 +38,6 @@ descricao: "Descrição em breve."
 },
 // ... adicione os outros nomes aqui
 };
-
 
 cards_.forEach(card => {
 card.addEventListener('click', () => {
