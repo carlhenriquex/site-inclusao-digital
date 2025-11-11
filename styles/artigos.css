@@ -154,6 +154,18 @@ strong {
   padding-left: 2.3rem;
 }
 
+/* ===== Gráficos ===== */
+
+.grafico {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.grafico img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ===== Tabelas ===== */
 
 .table-container {
@@ -173,6 +185,12 @@ table {
 thead {
   background-color: #6a29e9;
   color: #fff;
+}
+
+.subgroup {
+  background-color: #cdb7ff;
+  font-weight: bold;
+  color: #000850;
 }
 
 th, td {
