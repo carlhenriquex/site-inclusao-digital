@@ -20,15 +20,42 @@ item.addEventListener("click", () => {
 }
 }
 
-// === ABRIR E FECHAR CARDS DOS BOLSISTAS ===
-const cards_ = document.querySelectorAll('.card');
-const modal = document.getElementById('modal-bolsista');
-const close = document.querySelector('.close');
+const equipeFotos = document.querySelector(".equipe-fotos");
+const fotos = document.querySelectorAll(".foto-container");
+const setaEsquerda = document.querySelector(".seta.esquerda");
+const setaDireita = document.querySelector(".seta.direita");
 
-const modalImg = document.getElementById('modal-img');
-const modalNome = document.getElementById('modal-nome');
-const modalCurso = document.getElementById('modal-curso');
-const modalDescricao = document.getElementById('modal-descricao');
+let indiceAtual = 0;
+const total = fotos.length;
+
+// Atualiza o destaque e a posição do carrossel
+function atualizarCarrossel() {
+  fotos.forEach((f, i) => f.classList.remove("destaque"));
+  fotos[indiceAtual].classList.add("destaque");
+
+  // Calcula deslocamento para centralizar a imagem destaque
+    const gap = parseFloat(getComputedStyle(equipeFotos).gap) || 0;
+    const deslocamento = -indiceAtual * (fotos[0].offsetWidth + gap) + (equipeFotos.offsetWidth / 2) - (fotos[0].offsetWidth / 2);
+    equipeFotos.style.transform = `translateX(${deslocamento}px)`;
+}
+
+// Botões
+setaEsquerda.addEventListener("click", () => {
+  indiceAtual = (indiceAtual - 1 + total) % total;
+  atualizarCarrossel();
+});
+
+setaDireita.addEventListener("click", () => {
+  indiceAtual = (indiceAtual + 1) % total;
+  atualizarCarrossel();
+});
+
+// Inicia
+atualizarCarrossel();
+window.addEventListener("resize", atualizarCarrossel);
+
+
+// === ABRIR E FECHAR CARDS DOS BOLSISTAS ===
 
 // dados de cada modal
 const infos = {
@@ -60,26 +87,3 @@ descricao: "Graduanda em <b>Letras - Português</b> pela Universidade Federal de
 descricao: "Bacharel em <b>Administração</b> pelo Centro Universitário São Miguel e tecnólogo em <b>Gestão de Logística</b> pelo Instituto Brasileiro de Gestão e Marketing. Especialista em <b>Bioética</b>, com MBA em <b>Gestão de Instituições Públicas</b>, além de pós-graduações em <b>Docência na Educação Profissional e Tecnológica</b> e em <b>Gestão Pública Municipal</b>. Especializando em </b>Gestão na Educação Profissional</b> e em <b>Saúde Digital no Sistema Único de Saúde</b>. Possui mais de 20 anos de experiência em gestão administrativa, logística e liderança de equipes multidisciplinares. Atua como Tutor da Educação Profissional Polo/EAD na ETEPAC. Estudante do Curso Técnico em <b>Desenvolvimento de Sistemas</b> pela ETEPAC.<br> Atuou no projeto na elaboração de slides e ministração das aulas, além de contribuir na <b>criação e aprimoramento de materiais visuais para as redes sociais</b>."
 }
 }
-
-cards_.forEach(card => {
-card.addEventListener('click', () => {
-const nome = card.querySelector('h4').textContent;
-const imgSrc = card.querySelector('img').src;
-
-modalImg.src = imgSrc;
-modalNome.textContent = nome;
-modalDescricao.innerHTML = infos[nome]?.descricao || "Descrição em breve.";
-
-modal.style.display = 'flex';
-});
-});
-
-// Fecha o modal no icon x
-close.addEventListener('click', () => {
-modal.style.display = 'none';
-});
-
-// Fecha o modal clicando fora
-window.addEventListener('click', e => {
-if (e.target === modal) modal.style.display = 'none';
-});
