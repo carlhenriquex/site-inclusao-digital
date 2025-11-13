@@ -236,3 +236,30 @@ tbody tr:hover {
     flex-wrap: wrap;
   }
 }
+
+
+.imagem-centro {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 1.2rem;
+  max-width: 90%;
+}
+
+.sombra {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.borda-suave {
+  border: 2px solid rgba(0,0,0,0.05);
+}
+
+.bloco {
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.bloco.destaque {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
