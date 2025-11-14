@@ -35,7 +35,7 @@ function atualizarCarrossel() {
 
   // Calcula deslocamento para centralizar a imagem destaque
     const gap = parseFloat(getComputedStyle(equipeFotos).gap) || 0;
-    const deslocamento = -indiceAtual * (fotos[0].offsetWidth + gap) + (equipeFotos.offsetWidth / 2) - (fotos[0].offsetWidth / 2);
+    const deslocamento = -indiceAtual * (fotos[0].offsetWidth + gap) + (equipeFotos.offsetWidth / 2 - 15) - (fotos[0].offsetWidth / 2);
     equipeFotos.style.transform = `translateX(${deslocamento}px)`;
 }
 
