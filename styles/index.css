@@ -23,7 +23,7 @@
   padding-top: 1.3rem;
 }
 
-/* CABEÇALHO COM LOGO, MENU DE NAVEGAÇÃO E BOTAO DE ENTRAR */
+/* CABEÇALHO COM LOGO E MENU DE NAVEGAÇÃO */
 header {
   width: 100%;
   padding: 3px 4%;
@@ -57,39 +57,35 @@ header ul {
 }
 
 header ul li {
+  position: relative;
   display: inline-block;
   margin: 0 20px;
+  transition: transform .5s ease;
+}
+
+header ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 55%;
+  height: 2.2px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+}
+
+/* Manter expressura da borda na rolagem */
+header.rolagem ul li::after {
+  height: 2.3px;
+}
+
+header ul li:hover:after {
+  width: 100%;
 }
 
 header ul li a {
     color: var(--text-color);
     transition: 0.5s;
-}
-
-header ul li a:hover {
-  color: var(--primary-color);
-}
-
-header .btn-entrar {
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px 22px;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-header .btn-entrar:hover {
-  background-color: var(--laranja-bg);
-}
-
-header.rolagem .btn-entrar {
-  background-color: var(--laranja-bg);
-}
-
-header.rolagem .btn-entrar:hover {
-  background-color: #ef8402;
 }
 
 .menu-entrar {
@@ -528,49 +524,43 @@ main .containers {
 
 /* BOLSISTAS */
 
-.section-equipe {
+.bolsistas {
   text-align: center;
-  padding: 5rem 1rem;
+  border-radius: 60px;
+  background: linear-gradient(180deg, #00bfff4d 0%, #00bfff00 100%);
 }
 
-.section-equipe .box {
+.titulo-bolsistas h2 {
+  color: var(--primary-color);
+}
+
+.bolsistas .box {
   display: flex;
   justify-content: center;
   gap: 3rem;
 }
 
-.section-equipe .box .box-equipe {
+.bolsistas .box .box-equipe {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  width: 500px;
+  gap: 3rem;
 }
 
-.section-equipe .box .box-equipe h2 {
-  color: var(--tertiary-color);
+.bolsistas .box .box-equipe h2 {
+  font-size: 1.7rem;
+  color: var(--primary-color);
 }
 
-.section-equipe .box .box-equipe h2 .bi {
+.bolsistas .box .box-equipe h2 .bi {
   color: #ffd858;
-}
-
-.section-equipe .box .box-equipe span {
-  color: var(--quaternary-color);
-}
-
-.section-equipe .box .descricao-equipe {
-  width: 50vh;
-  height: 20rem;
-  background-color: var(--primary-color);
 }
 
 .carrossel-equipe {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 31rem;
-  gap: 1rem;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -580,7 +570,7 @@ main .containers {
   background-color: transparent;
   border: none;
   font-size: 2.5rem;
-  color: #888;
+  color: #ffffffa0;
   cursor: pointer;
   transition: color 0.3s ease;
   position: absolute;
@@ -593,11 +583,11 @@ main .containers {
 
 .seta.direita {
   top: 50%;
-  right: 40px;
+  right: 30px;
 }
 
 .seta:hover {
-  color: #000;
+  color: #fff;
 }
 
 .equipe-fotos {
@@ -622,9 +612,9 @@ main .containers {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--secondary-color);
-  font-size: .8rem;
-  padding: 4px 9px;
+  background: linear-gradient(160deg, var(--primary-color) 40%, var(--secondary-color));
+  font-size: .6rem;
+  padding: 3px 9px;
   border-radius: 20px;
   white-space: nowrap;
 }
@@ -632,7 +622,7 @@ main .containers {
 .foto-container.destaque .foto {
   width: 180px;
   height: 180px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px #6929e97a;
   transform: scale(1.1);
 }
 
@@ -655,26 +645,58 @@ main .containers {
   object-fit: cover;
 }
 
-.barras-coloridas {
+.box .box-descricao-equipe {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 3rem;
+  justify-content: center;
+  gap: 2rem;
+  width: 28rem;
+  height: 23rem;
 }
 
-.barra {
-  width: 70px;
-  height: 15px;
-  border-radius: 30px;
-  display: inline-block;
+.box-descricao-equipe .titulo-descricao-equipe h2 {
+  background: linear-gradient(155deg, var(--primary-color) 45%, var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.lilas { background-color: #cbb8ff; }
-.amarela { background-color: #ffe259; }
-.rosa { background-color: #85ee93; }
-.azul { background-color: #9dd6ff; }
-.roxa { background-color: #b88cff; }
+.box-descricao-equipe .conteudo-descricao-equipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.conteudo-descricao-equipe .descricao-equipe h3 {
+  background: linear-gradient(155deg, var(--primary-color) 35%, var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.conteudo-descricao-equipe .descricao-equipe h4 {
+  background: linear-gradient(155deg, var(--primary-color) 60%, var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.bolsistas .bolsistas-saiba-mais {
+  width: 100%;
+  min-height: 140px;
+  margin-top: 6rem;
+  background: linear-gradient(120deg, var(--primary-color)45%, var(--secondary-color));;
+}
 
 @media (max-width: 768px) {
   .equipe-fotos {
