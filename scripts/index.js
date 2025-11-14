@@ -25,7 +25,7 @@ const fotos = document.querySelectorAll(".foto-container");
 const setaEsquerda = document.querySelector(".seta.esquerda");
 const setaDireita = document.querySelector(".seta.direita");
 
-let indiceAtual = 0;
+let indiceAtual = 3;
 const total = fotos.length;
 
 // Atualiza o destaque e a posição do carrossel
