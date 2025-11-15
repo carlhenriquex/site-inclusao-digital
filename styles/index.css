@@ -280,7 +280,7 @@ main .containers {
   display: block;
 }
 
-.container {
+.conteudos-projeto {
   padding: 2.5rem;
 }
 
@@ -399,7 +399,7 @@ main .containers {
 }
 
 @media (max-width: 900px) {
-  .container {
+  .conteudos-projeto {
     flex-direction: column;
   }
 
