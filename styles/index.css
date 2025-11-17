@@ -2,25 +2,21 @@
 
 .titulos_containers {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-direction: column;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .titulos_containers h2 {
-  font-size: 1.9rem;
+  font-size: 32px;
+  font-weight: 700;
+  max-width: 60vw;
   color: var(--tertiary-color);
 }
 
-.titulos_containers h2 span {
+.titulos_containers span {
   color: var(--quaternary-color);
-}
-
-.titulos_containers p {
-  color: #6c6c6cd1;
-  padding-top: 1.3rem;
 }
 
 /* CABEÇALHO COM LOGO E MENU DE NAVEGAÇÃO */
@@ -811,6 +807,83 @@ main .containers {
     width: 140px;
     height: 140px;
   }
+}
+
+/* DEPOIMENTOS DO ALUNOS DO PROJETO */
+
+
+
+.section-badge {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonials-tech {
+  padding: 90px 0;
+  width: 100%;
+  position: relative;
+  color: var(--dark-text-color);
+}
+
+.tech-line {
+  width: 80px;
+  height: 3px;
+  background-color: var(--tertiary-color);
+  margin: 10px auto 40px auto;
+  border-radius: 4px;
+}
+
+.tech-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.tech-card {
+  background: #fff;
+  color: var(--dark-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+  border: 1px #c1c1c1 solid;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  border: 1px var(--primary-color) solid;
+}
+
+.tech-profile {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.tech-profile span {
+  font-size: 14px;
+}
+
+.tech-text {
+  font-size: 15px;
+  color: #6e6e6e;
+  
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.tech-rating {
+    color: var(--primary-color);
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
 /* APOIADORES DO PROJETO */
