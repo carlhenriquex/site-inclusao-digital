@@ -381,18 +381,64 @@ main .containers {
 
 .features ul li {
   background-color: var(--quaternary-color);
+  position: relative;
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 15px;
   font-size: .9rem;
   font-weight: 600;
   gap: 10px;
+  cursor: pointer;
   color: var(--text-color);
   transition: background 0.5s ease;
 }
 
+/* box balao */
+.features li::after {
+  content: attr(data-info);
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  width: 260px;
+  background: var(--quaternary-color);
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+  z-index: 20;
+  line-height: 1.4;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+/* seta balao */
+.features li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -11px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #fff transparent transparent transparent;
+  opacity: 0;
+  transition: 0.2s ease;
+  z-index: 19;
+}
+
+.features li:hover::after,
+.features li:hover::before {
+  opacity: 1;
+}
+
 .features ul li:hover {
-  background-color: #1db031;
+  background-color: #1ca52e;
 }
 
 @media (max-width: 900px) {
@@ -710,6 +756,10 @@ main .containers {
   align-items: center;
 }
 
+.usuarios-lista:hover img {
+  opacity: 0.5;
+}
+
 .usuarios-lista img {
   width: 65px;
   height: 65px;
@@ -717,6 +767,13 @@ main .containers {
   margin-left: -12px;
   object-fit: cover;
   border: 3px solid #fff;
+  cursor: pointer;
+}
+
+.usuarios-lista img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .botao-mais {
@@ -740,6 +797,7 @@ main .containers {
   background-color: var(--primary-color);
   color: #fff;
   border: 3px solid #fff;
+  z-index: 1;
 }
 
 .texto-blocos {
@@ -810,8 +868,6 @@ main .containers {
 }
 
 /* DEPOIMENTOS DO ALUNOS DO PROJETO */
-
-
 
 .section-badge {
   font-size: 14px;
@@ -982,14 +1038,27 @@ main .containers {
 
 .footer-column ul li a {
   color: var(--text-color);
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   transition: 0.5s;
 }
-
-.footer-column ul li a:hover {
-  color: var(--quaternary-color);
+.footer-column ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 45%;
+  height: 2.3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: .1s ease;
 }
+
+.footer-column ul li a:hover::after {
+  width: 100%;
+}
+
 
 /* Rodapé inferior */
 .footer-bottom {
