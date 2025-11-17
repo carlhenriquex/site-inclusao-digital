@@ -869,8 +869,6 @@ main .containers {
 
 /* DEPOIMENTOS DO ALUNOS DO PROJETO */
 
-
-
 .section-badge {
   font-size: 14px;
   font-weight: 600;
@@ -1040,14 +1038,27 @@ main .containers {
 
 .footer-column ul li a {
   color: var(--text-color);
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   transition: 0.5s;
 }
-
-.footer-column ul li a:hover {
-  color: var(--quaternary-color);
+.footer-column ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 45%;
+  height: 2.3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: .1s ease;
 }
+
+.footer-column ul li a:hover::after {
+  width: 100%;
+}
+
 
 /* Rodapé inferior */
 .footer-bottom {

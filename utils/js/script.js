@@ -20,6 +20,7 @@ item.addEventListener("click", () => {
 }
 }
 
+// === ===
 const equipeFotos = document.querySelector(".equipe-fotos");
 const fotos = document.querySelectorAll(".foto-container");
 const setaEsquerda = document.querySelector(".seta.esquerda");
@@ -53,3 +54,7 @@ setaDireita.addEventListener("click", () => {
 // Inicia
 atualizarCarrossel();
 window.addEventListener("resize", atualizarCarrossel);
+
+
+// === ===
+

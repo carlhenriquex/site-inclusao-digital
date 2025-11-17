@@ -1,6 +1,6 @@
 @import url("global.css");
 
-header {
+#header-perfis {
   width: 100%;
   background-color: var(--primary-color);
   display: flex;
@@ -10,6 +10,11 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  transition: 0.3s ease;
+}
+
+#header-perfis.hide {
+  transform: translateY(-100%);
 }
 
 header .button-voltar {
