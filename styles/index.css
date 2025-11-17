@@ -569,8 +569,9 @@ main .containers {
 
 .bolsistas {
   text-align: center;
-  border-radius: 60px;
-  background: linear-gradient(180deg, #00bfff4d 0%, #00bfff00 100%);
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  background: linear-gradient(180deg, #00bfff72 0%, #00bfff30 60%);
 }
 
 .titulo-bolsistas h2 {
@@ -736,7 +737,7 @@ main .containers {
 .blocos-usuarios {
   width: 100%;
   padding: 3.5rem 1rem;
-  margin-top: 6rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
   background: linear-gradient(120deg, var(--primary-color)25%, var(--secondary-color));
@@ -878,10 +879,12 @@ main .containers {
 }
 
 .testimonials-tech {
-  padding: 90px 0;
+  padding-bottom: 90px;
   width: 100%;
   position: relative;
   color: var(--dark-text-color);
+  background: linear-gradient(180deg, #00bfff30 0%, #00bfff00 80%);
+  padding-top: 7rem;
 }
 
 .tech-line {
