@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/artigos.css">
     <title>Inclusão digital - relatório</title>
+
+    <!-- VLibras script (carrega no head com defer + fallback de carregamento) -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initVLibras() {
+          if (window.VLibras) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } else {
+            setTimeout(initVLibras, 100);
+          }
+        }
+        initVLibras();
+      });
+    </script>
 </head>
+
 <body>
+     <!-- VLibras -->
+   <div vw class="enabled">
+       <div vw-access-button class="active"></div>
+       <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+       </div>
+   </div>
+   
     <header>
         <a href="../index.html#projeto" class="button-voltar" aria-label="Voltar para a seção Projeto na página inicial"><i class="bi bi-caret-left-fill" aria-hidden="true"></i> <p>voltar</p></a>
         <img src="../utils/img/logos/logo_site_branca.png" alt="Logo Inclusão Digital">
@@ -71,67 +95,67 @@
                 <thead>
 
                 <tr>
-                    <th id="h-equipe" scope="col">EQUIPE</th>
-                    <th id="h-funcao-proj" scope="col">FUNÇÃO NO PROJETO</th>
-                    <th id="h-funcao-etepac" scope="col">FUNÇÃO NA ETEPAC</th>
+                    <th id="h-nome" scope="col">NOME</th>
+                    <th id="h-proj" scope="col">FUNÇÃO NO PROJETO</th>
+                    <th id="h-etepac" scope="col">FUNÇÃO NA ETEPAC</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr>
-                    <td headers="h-equipe">Sônia Maria de Pádua</td>
-                    <td headers="h-funcao-proj">Coordenadora</td>
-                    <td headers="h-funcao-etepac">Professora de Biblioteconomia</td>
+                    <td aria-labelledby="h-nome nome-sonia" id="nome-sonia">Sônia Maria de Pádua</td>
+                    <td aria-labelledby="h-proj proj-sonia" id="proj-sonia">Coordenadora</td>
+                    <td aria-labelledby="h-etepac etepac-sonia" id="etepac-sonia">Professora de Biblioteconomia</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Fagner Barbosa Silva Pontes</td>
-                    <td headers="h-funcao-proj">Professor</td>
-                    <td headers="h-funcao-etepac">Professor de Desenvolvimento de Sistemas</td>
+                    <td aria-labelledby="h-nome nome-fagner" id="nome-fagner">Fagner Barbosa Silva Pontes</td>
+                    <td aria-labelledby="h-proj proj-fagner" id="proj-fagner">Professor</td>
+                    <td aria-labelledby="h-etepac etepac-fagner" id="etepac-fagner">Professor de Desenvolvimento de Sistemas</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Andryene da Mota Rodrigues</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluna do Técnico em Administração</td>
+                    <td aria-labelledby="h-nome nome-andry" id="nome-andry">Andryene da Mota Rodrigues</td>
+                    <td aria-labelledby="h-proj proj-andry" id="proj-andry">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-andry" id="etepac-andry">Aluna do Técnico em Administração</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Carlos Henrique Correia dos Santos</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluno do Técnico em Design Gráfico</td>
+                    <td aria-labelledby="h-nome nome-carl" id="nome-carl">Carlos Henrique Correia dos Santos</td>
+                    <td aria-labelledby="h-proj proj-carl" id="proj-carl">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-carl" id="etepac-carl">Aluno do Técnico em Design Gráfico</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Glébson Pedro da Silva</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluno do Técnico em Logística</td>
+                    <td aria-labelledby="h-nome nome-glebson" id="nome-glebson">Glébson Pedro da Silva</td>
+                    <td aria-labelledby="h-proj proj-glebson" id="proj-glebson">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-glebson" id="etepac-glebson">Aluno do Técnico em Logística</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Jaquelyne Alves da Silva</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluna do Técnico em Tradução e Interpretação de LIBRAS</td>
+                    <td aria-labelledby="h-nome nome-jaque" id="nome-jaque">Jaquelyne Alves da Silva</td>
+                    <td aria-labelledby="h-proj proj-jaque" id="proj-jaque">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-jaque" id="etepac-jaque">Aluna do Técnico em Tradução e Interpretação de LIBRAS</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Júlio Rasec Cabral Marques da Silva</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluno do Técnico em Desenvolvimento de Sistemas</td>
+                    <td aria-labelledby="h-nome nome-julio" id="nome-julio">Júlio Rasec Cabral Marques da Silva</td>
+                    <td aria-labelledby="h-proj proj-julio" id="proj-julio">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-julio" id="etepac-julio">Aluno do Técnico em Desenvolvimento de Sistemas</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Leonardo da Silva Felipe</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluno do Técnico em Logística</td>
+                    <td aria-labelledby="h-nome nome-leo" id="nome-leo">Leonardo da Silva Felipe</td>
+                    <td aria-labelledby="h-proj proj-leo" id="proj-leo">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-leo" id="etepac-leo">Aluno do Técnico em Logística</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Rayane Mireli Silva Gomes</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluna do Técnico em Desenvolvimento de Sistemas</td>
+                    <td aria-labelledby="h-nome nome-ray" id="nome-ray">Rayane Mireli Silva Gomes</td>
+                    <td aria-labelledby="h-proj proj-ray" id="proj-ray">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-ray" id="etepac-ray">Aluna do Técnico em Desenvolvimento de Sistemas</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Ruth Pereira da Silva</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluna do Técnico em Logística</td>
+                    <td aria-labelledby="h-nome nome-ruth" id="nome-ruth">Ruth Pereira da Silva</td>
+                    <td aria-labelledby="h-proj proj-ruth" id="proj-ruth">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-ruth" id="etepac-ruth">Aluna do Técnico em Logística</td>
                 </tr>
                 <tr>
-                    <td headers="h-equipe">Valmir Pereira da Silva</td>
-                    <td headers="h-funcao-proj">Bolsista</td>
-                    <td headers="h-funcao-etepac">Aluno do Técnico em Desenvolvimento de Sistemas</td>
+                    <td aria-labelledby="h-nome nome-valmir" id="nome-valmir">Valmir Pereira da Silva</td>
+                    <td aria-labelledby="h-proj proj-valmir" id="proj-valmir">Bolsista</td>
+                    <td aria-labelledby="h-etepac etepac-valmir" id="etepac-valmir">Aluno do Técnico em Desenvolvimento de Sistemas</td>
                 </tr>
                 </tbody>
             </table>
@@ -162,24 +186,24 @@
 
                 <tbody>
                 <tr>
-                    <td headers="h-curso">Desenvolvimento de Sistemas</td>
-                    <td headers="h-qtd">3</td>
+                    <td aria-labelledby="h-curso curso-ds" id="curso-ds">Desenvolvimento de Sistemas</td>
+                    <td aria-labelledby="h-qtd qtd-ds" id="qtd-ds">3</td>
                 </tr>
                 <tr>
-                    <td headers="h-curso">Logística</td>
-                    <td headers="h-qtd">3</td>
+                    <td aria-labelledby="h-curso curso-log" id="curso-log">Logística</td>
+                    <td aria-labelledby="h-qtd qtd-log" id="qtd-log">3</td>
                 </tr>
                 <tr>
-                    <td headers="h-curso">Administração</td>
-                    <td headers="h-qtd">1</td>
+                    <td aria-labelledby="h-curso curso-adm" id="curso-adm">Administração</td>
+                    <td aria-labelledby="h-qtd qtd-adm" id="qtd-adm">1</td>
                 </tr>
                 <tr>
-                    <td headers="h-curso">Design Gráfico</td>
-                    <td headers="h-qtd">1</td>
+                    <td aria-labelledby="h-curso curso-design" id="curso-design">Design Gráfico</td>
+                    <td aria-labelledby="h-qtd qtd-design" id="qtd-design">1</td>
                 </tr>
                 <tr>
-                    <td headers="h-curso">Tradução e Interpretação de LIBRAS</td>
-                    <td headers="h-qtd">1</td>
+                    <td aria-labelledby="h-curso curso-libras" id="curso-libras">Tradução e Interpretação de LIBRAS</td>
+                    <td aria-labelledby="h-qtd qtd-libras" id="qtd-libras">1</td>
                 </tr>
                 </tbody>
             </table>
@@ -253,21 +277,21 @@
                 </tr>
 
                 <tr>
-                    <th scope="col" class="subgroup" id="h-alunos">ALUNOS>ALUNOS</th>
-                    <th scope="col" class="subgroup" id="h-periodo">PERÍODO DO CURSO</th>
+                    <th scope="col" class="subgroup">ALUNOS</th>
+                    <th scope="col" class="subgroup">PERÍODO DO CURSO</th>
                     <th scope="col" class="subgroup" id="h-carga">CARGA HORÁRIA SEMANAL</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr>
-                    <td headers="h-alunos">21 alunos</td>
-                    <td headers="h-periodo">4 turmas: 15/09 a 03/20/2025</td>
-                    <td headers="h-carga">10 horas</td>
+                    <td>21 alunos</td>
+                    <td>4 turmas: 15/09 a 03/10/2025</td>
+                    <td aria-labelledby="h-carga dados-carga" id="dados-carga">10 horas</td>
                 </tr>
 
                 <tr class="total-tabela">
-                    <th colspan="3">TOTAL DE HORAS DO CURSO: 40 horas</th>
+                    <td colspan="3">TOTAL DE HORAS DO CURSO: 40 horas</td>
                 </tr>
                 </tbody>
             </table>
@@ -282,65 +306,64 @@
             </p>
 
             <div class="table-container">
-            <table>
-                <thead>
+                <table>
 
-                <tr>
-                    <th colspan="2">GRUPOS</th>
-                </tr>
-                </thead>
+                    <thead>
+                    <tr>
+                        <th colspan="2">GRUPOS</th>
+                    </tr>
+                    </thead>
 
-                <tbody id="grupo-redacao-insta">
-                <tr>
-                    <th scope="col" class="subgroup" id="h-redacao">REDAÇÃO</th>
-                    <th scope="col" class="subgroup" id="h-instagram">INSTAGRAM</th>
-                </tr>
-                <tr>
-                    <td headers="h-redacao">Ruth Pereira da Silva</td>
-                    <td headers="h-instagram">Carlos Henrique Correia dos Santos</td>
-                </tr>
-                <tr>
-                    <td headers="h-redacao">Sônia Maria de Pádua</td>
-                    <td headers="h-instagram">Jaquelyne Alves da Silva</td>
-                </tr>
-                <tr>
-                    <td headers="h-redacao">Glébson Pedro da Silva</td>
-                    <td headers="h-instagram">Valmir Pereira da Silva</td>
-                </tr>
-                </tbody>
+                    <tbody id="grupo-redacao-insta">
+                    <tr>
+                        <th scope="col" class="subgroup" id="h-redacao">REDAÇÃO</th>
+                        <th scope="col" class="subgroup" id="h-insta">INSTAGRAM</th>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-redacao redacao-ruth" id="redacao-ruth">Ruth Pereira da Silva</td>
+                        <td aria-labelledby="h-insta insta-carl" id="insta-carl">Carlos Henrique Correia dos Santos</td>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-redacao redacao-sonia" id="redacao-sonia">Sônia Maria de Pádua</td>
+                        <td aria-labelledby="h-insta insta-jaque" id="insta-jaque">Jaquelyne Alves da Silva</td>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-redacao redacao-glebson" id="redacao-glebson">Glébson Pedro da Silva</td>
+                        <td aria-labelledby="h-insta insta-valmir" id="insta-valmir">Valmir Pereira da Silva</td>
+                    </tr>
+                    </tbody>
 
-                <tbody id="grupo-monitoramento-site">
-                <tr>
-                    <th scope="col" class="subgroup" id="h-monitoramento">MONITORAMENTO DO CRONOGRAMA</th>
-                    <th scope="col" class="subgroup" id="h-site">ELABORAÇÃO DO SITE</th>
-                </tr>
-                <tr>
-                    <td headers="h-monitoramento">Leonardo da Silva Felipe</td>
-                    <td headers="h-site">Carlos Henrique Correia dos Santos</td>
-                </tr>
-                <tr>
-                    <td headers="h-monitoramento">Sônia Maria de Pádua</td>
-                    <td headers="h-site">Jaquelyne Alves da Silva</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td headers="h-site">Júlio Rasec Cabral Marques da Silva</td>
-                </tr>
-                </tbody>
+                    <tbody id="grupo-monitoramento-site">
+                    <tr>
+                        <th scope="col" class="subgroup" id="h-monitoramento">MONITORAMENTO DO CRONOGRAMA</th>
+                        <th scope="col" class="subgroup" id="h-site">ELABORAÇÃO DO SITE</th>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-monitoramento monit-leo" id="monit-leo">Leonardo da Silva Felipe</td>
+                        <td aria-labelledby="h-site site-carl" id="site-carl">Carlos Henrique Correia dos Santos</td>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-monitoramento monit-sonia" id="monit-sonia">Sônia Maria de Pádua</td>
+                        <td aria-labelledby="h-site site-jaque" id="site-jaque">Jaquelyne Alves da Silva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td aria-labelledby="h-site site-julio" id="site-julio">Júlio Rasec Cabral Marques da Silva</td>
+                    </tr>
+                    </tbody>
 
-                <tbody id="grupo-video-dados">
-                <tr>
-                    <th scope="col" class="subgroup" id="h-video">ELABORAÇÃO DO VÍDEO</th>
-                    <th scope="col" class="subgroup" id="h-dados">ANÁLISE DE DADOS</th>
-                </tr>
-                <tr>
-                    <td headers="h-video">Andryene da Mota Rodrigues</td>
-                    <td headers="h-dados">Rayane Mireli Silva Gomes</td>
-                </tr>
-                </tbody>
-
-            </table>
-            </div>
+                    <tbody id="grupo-video-dados">
+                    <tr>
+                        <th scope="col" class="subgroup" id="h-video">ELABORAÇÃO DO VÍDEO</th>
+                        <th scope="col" class="subgroup" id="h-dados">ANÁLISE DE DADOS</th>
+                    </tr>
+                    <tr>
+                        <td aria-labelledby="h-video video-andry" id="video-andry">Andryene da Mota Rodrigues</td>
+                        <td aria-labelledby="h-dados dados-ray" id="dados-ray">Rayane Mireli Silva Gomes</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
 
             <p>
             Todo o material foi entregue até o dia 28 de novembro de 2025 para avaliação da FACEPE, durante a apresentação do projeto.
@@ -359,18 +382,6 @@
             </p>
         </div>
     </main>
-
-    <!-- Plugin VLibras -->
-    <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
     
 </body>
 </html>

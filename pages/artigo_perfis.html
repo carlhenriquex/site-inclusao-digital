@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/perfis.css">
-    <title>Inclusão digital - perfis</title>
+    <title>Perfil Bolsistas</title>
+
+    <!-- VLibras script (carrega no head com defer + fallback de carregamento) -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initVLibras() {
+          if (window.VLibras) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } else {
+            setTimeout(initVLibras, 100);
+          }
+        }
+        initVLibras();
+      });
+    </script>
 </head>
+
 <body>
+     <!-- VLibras -->
+   <div vw class="enabled">
+       <div vw-access-button class="active"></div>
+       <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+       </div>
+   </div>
+   
     <canvas id="tech-bg"></canvas>
 
     <header id="header-perfis">
@@ -121,18 +145,6 @@
     <script src="../utils/js/perfis.js"></script>
 
     <script src="../utils/js/animated.js"></script>    
-    
-    <!-- Plugin VLibras -->
-    <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
     
 </body>
 </html>

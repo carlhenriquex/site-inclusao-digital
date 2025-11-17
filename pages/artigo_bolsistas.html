@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/artigos.css">
     <title>Inclusão digital - bolsistas</title>
+
+    <!-- VLibras script (carrega no head com defer + fallback de carregamento) -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initVLibras() {
+          if (window.VLibras) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } else {
+            setTimeout(initVLibras, 100);
+          }
+        }
+        initVLibras();
+      });
+    </script>
 </head>
+
 <body>
+     <!-- VLibras -->
+   <div vw class="enabled">
+       <div vw-access-button class="active"></div>
+       <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+       </div>
+   </div>
+   
     <header>
         <a href="../index.html#artigos" class="button-voltar" aria-label="Voltar para a seção Artigos na página inicial"><i class="bi bi-caret-left-fill" aria-hidden="true"></i> <p>voltar</p></a>
         <img src="../utils/img/logos/logo_site_branca.png" alt="Logo Inclusão Digital">
@@ -56,18 +80,6 @@
             </p>
         </div>
     </main>
-   
-    <!-- Plugin VLibras -->
-    <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
     
 </body>
 </html>

@@ -6,10 +6,33 @@
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Inclusão digital - home</title>
+
+    <!-- VLibras script (carrega no head com defer + fallback de carregamento) -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initVLibras() {
+          if (window.VLibras) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } else {
+            setTimeout(initVLibras, 100);
+          }
+        }
+        initVLibras();
+      });
+    </script>
 </head>
 
 <body>
-    <!-- cabeçalho com logo e menu de navegação -->
+     <!-- VLibras -->
+   <div vw class="enabled">
+       <div vw-access-button class="active"></div>
+       <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+       </div>
+   </div>
+
+        <!-- cabeçalho com logo e menu de navegação -->
     <header class="header" id="header">
         <div class="box-header">
 
@@ -491,17 +514,5 @@
     <script src="utils/js/script.js"></script>
     <script src="utils/js/animated.js"></script>
 
-    <!-- Plugin VLibras -->
-    <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    
 </body>
 </html>
