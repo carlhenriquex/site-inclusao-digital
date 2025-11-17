@@ -381,18 +381,64 @@ main .containers {
 
 .features ul li {
   background-color: var(--quaternary-color);
+  position: relative;
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 15px;
   font-size: .9rem;
   font-weight: 600;
   gap: 10px;
+  cursor: pointer;
   color: var(--text-color);
   transition: background 0.5s ease;
 }
 
+/* box balao */
+.features li::after {
+  content: attr(data-info);
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  width: 260px;
+  background: var(--quaternary-color);
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+  z-index: 20;
+  line-height: 1.4;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+/* seta balao */
+.features li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -11px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #fff transparent transparent transparent;
+  opacity: 0;
+  transition: 0.2s ease;
+  z-index: 19;
+}
+
+.features li:hover::after,
+.features li:hover::before {
+  opacity: 1;
+}
+
 .features ul li:hover {
-  background-color: #1db031;
+  background-color: #1ca52e;
 }
 
 @media (max-width: 900px) {
