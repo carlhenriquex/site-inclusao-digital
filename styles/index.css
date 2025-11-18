@@ -15,6 +15,14 @@
   color: var(--tertiary-color);
 }
 
+.section-badge {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .titulos_containers span {
   color: var(--quaternary-color);
 }
@@ -56,7 +64,6 @@ header ul li {
   position: relative;
   display: inline-block;
   margin: 0 20px;
-  
 }
 
 header ul li::after {
@@ -85,29 +92,28 @@ header ul li a {
     transition: 0.5s;
 }
 
-.menu-entrar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 .icon-menu {
   display: none;
 }
 
 .icon-menu button {
+  color: #fff;
+  cursor: pointer;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .mobile-menu {
   display: none;
-  background-color: #ffffffc6;
+  background-color: #00bfffbe;
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0;
+}
+
+.mobile-menu.open {
+  display: block;
 }
 
 .mobile-menu ul {
@@ -127,13 +133,18 @@ header ul li a {
 }
 
 .mobile-menu ul li .item-mobile {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: .9px;
+  transition: .3s ease;
 }
 
 .mobile-menu ul li .item-mobile:hover {
-  color: var(--laranja-bg);
+  background-color: #fff;
+  color: var(--secondary-color);
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 main .containers {
@@ -293,7 +304,6 @@ main .containers {
 
 .right-box {
   width: 50%;
-  height: 25rem;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -328,6 +338,7 @@ main .containers {
   transition: 0.5s ease;
   text-align: center;
   max-width: 200px;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -452,7 +463,7 @@ main .containers {
 
 .professores .box_professor {
   display: flex;
-  width: 1000px;
+  max-width: 1000px;
   color: var(--tertiary-color);
   margin-bottom: 5rem;
 }
@@ -500,8 +511,8 @@ main .containers {
 
 .professores .box_professor img {
   align-self: center;
-  width: 18rem;
-  height: 18rem;
+  width: 30%;
+  height: 30%;
   transition: 0.7s ease;
 }
 
@@ -658,7 +669,7 @@ main .containers {
   justify-content: center;
   gap: 2rem;
   width: 28rem;
-  height: 23rem;
+
 }
 
 .box-descricao-equipe .titulo-descricao-equipe h2 {
@@ -739,7 +750,7 @@ main .containers {
   z-index: 1;
 }
 
-.botao-mais {
+.icon-capelo {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -756,7 +767,7 @@ main .containers {
   transition: .3s ease;
 }
 
-.botao-mais:hover {
+.icon-capelo:hover {
   background-color: var(--primary-color);
   color: #fff;
   border: 3px solid #fff;
@@ -803,14 +814,6 @@ main .containers {
 }
 
 /* DEPOIMENTOS DO ALUNOS DO PROJETO */
-
-.section-badge {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 .testimonials-tech {
   padding-bottom: 90px;
@@ -889,14 +892,20 @@ main .containers {
     margin-bottom: 10rem;
 }
 
-.apoiadores .box-icons-apoio {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.box-icons-apoio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .box-icons-apoio img {
-  width: 12rem;
+  max-width: 12rem;
+  height: auto;
+  flex: 1 1 auto;
+  object-fit: contain;
   transition: 0.4s ease;
 }
 

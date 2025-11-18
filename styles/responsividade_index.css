@@ -1,0 +1,93 @@
+/* RESPONSIVIDADE GERAL DO INDEX */
+
+@media (max-width: 1200px) {
+
+    .flex ul li {
+    margin: 0 11px;
+    }
+
+    .background-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px;
+    gap: 40px;
+    }
+
+    .bolsistas .box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .box-saiba-mais .texto-blocos {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .flex .desktop-menu {
+        display: none;
+    }
+
+    .flex .icon-menu {
+        display: block;
+    }
+
+    .conteudos-projeto {
+        flex-direction: column;
+    }
+
+    .left-box {
+    width: 100%;
+    }
+
+    .background-box .right-box {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .blocos-usuarios-container {
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .texto-blocos {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    }
+
+    .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+    .footer-column h3 {
+    border: none;
+    }
+
+    .footer-logo img {
+    margin-bottom: 20px;
+    } 
+}
+
+@media (max-width: 768px) {
+
+    .equipe-fotos {
+    gap: 1rem;
+    }
+    .foto {
+    width: 100px;
+    height: 100px;
+    }
+    .foto.destaque {
+    width: 140px;
+    height: 140px;
+    }
+}
