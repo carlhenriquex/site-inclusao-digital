@@ -15,8 +15,8 @@ const menuItems = menuMobile.querySelectorAll(".item-mobile");
 menuItems.forEach(item => {
 item.addEventListener("click", () => {
     menuMobile.classList.remove("open");
-});
-});
+} );
+} );
 }
 }
 

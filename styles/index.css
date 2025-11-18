@@ -15,6 +15,14 @@
   color: var(--tertiary-color);
 }
 
+.section-badge {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .titulos_containers span {
   color: var(--quaternary-color);
 }
@@ -56,7 +64,6 @@ header ul li {
   position: relative;
   display: inline-block;
   margin: 0 20px;
-  
 }
 
 header ul li::after {
@@ -85,29 +92,28 @@ header ul li a {
     transition: 0.5s;
 }
 
-.menu-entrar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 .icon-menu {
   display: none;
 }
 
 .icon-menu button {
+  color: #fff;
+  cursor: pointer;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .mobile-menu {
   display: none;
-  background-color: #ffffffc6;
+  background-color: #00bfffbe;
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0;
+}
+
+.mobile-menu.open {
+  display: block;
 }
 
 .mobile-menu ul {
@@ -127,13 +133,18 @@ header ul li a {
 }
 
 .mobile-menu ul li .item-mobile {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: .9px;
+  transition: .3s ease;
 }
 
 .mobile-menu ul li .item-mobile:hover {
-  color: var(--laranja-bg);
+  background-color: #fff;
+  color: var(--secondary-color);
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 main .containers {
@@ -293,7 +304,6 @@ main .containers {
 
 .right-box {
   width: 50%;
-  height: 25rem;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -388,7 +398,6 @@ main .containers {
   margin-bottom: 15px;
   font-size: .9rem;
   font-weight: 600;
-    white-space: nowrap;
   gap: 10px;
   cursor: pointer;
   color: var(--text-color);
@@ -805,14 +814,6 @@ main .containers {
 }
 
 /* DEPOIMENTOS DO ALUNOS DO PROJETO */
-
-.section-badge {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 .testimonials-tech {
   padding-bottom: 90px;
