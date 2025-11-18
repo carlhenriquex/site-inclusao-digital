@@ -129,6 +129,13 @@ strong {
 }
 
 /* Redes sociais dos bolsistas */
+.nome-e-icones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;  
+}
+
 .bolsistas .social-icons {
   margin-top: 1rem;
   display: flex;
@@ -150,12 +157,6 @@ strong {
   color: transparent;
 }
 
-.nome-e-icones {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;  
-}
 
 /* Responsividade */
 @media (max-width: 768px) {

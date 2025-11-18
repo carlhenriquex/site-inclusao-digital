@@ -441,17 +441,6 @@ main .containers {
   background-color: #1ca52e;
 }
 
-@media (max-width: 900px) {
-  .conteudos-projeto {
-    flex-direction: column;
-  }
-
-  .left-box,
-  .right-box {
-    width: 100%;
-  }
-}
-
 /* PROFESSORES */
 
 .professores {
@@ -536,33 +525,6 @@ main .containers {
 
 .professores .social-icons .btn-sociais i:hover {
   color: var(--quaternary-color);
-}
-
-/* BOLSISTAS */
-
-.card-content h3.badge1 {
-  color: #5370f0;
-  background: #dde4ff;
-}
-
-.card-content h3.badge2 {
-  color: #b22485;
-  background: #f7dff5;
-}
-
-.card-content h3.badge3 {
-  color: #9333ea;
-  background: #f3e8ff;
-}
-
-.card-content h3.badge4 {
-  color: #2b9b5f;
-  background: #d2f8e3;
-}
-
-.card-content h3.badge5 {
-  color: #c95f2a;
-  background: #ffe8d6;
 }
 
 /* BOLSISTAS */
@@ -840,34 +802,6 @@ main .containers {
   width: 100%;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .blocos-usuarios-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .texto-blocos {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .equipe-fotos {
-    gap: 1rem;
-  }
-  .foto {
-    width: 100px;
-    height: 100px;
-  }
-  .foto.destaque {
-    width: 140px;
-    height: 140px;
-  }
-}
-
 /* DEPOIMENTOS DO ALUNOS DO PROJETO */
 
 .section-badge {
@@ -1062,7 +996,6 @@ main .containers {
   width: 100%;
 }
 
-
 /* Rodapé inferior */
 .footer-bottom {
   text-align: center;
@@ -1080,90 +1013,4 @@ main .containers {
 
 .footer-bottom a:hover {
   text-decoration: underline;
-}
-
-/* ===== Modal ===== */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: #fff;
-  color: var(--tertiary-color);
-  border-radius: 20px;
-  padding: 30px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center; /* mantém centralizado o título e imagem */
-  position: relative;
-  animation: fadeIn 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px; /* separa automaticamente os elementos internos */
-}
-
-/* Imagem do bolsista */
-.modal-content img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-/* Nome */
-#modal-nome {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-/* Descrição */
-#modal-descricao {
-  text-align: justify;      /* justifica o texto da descrição */
-  line-height: 1.5;      /* melhora a legibilidade */
-  font-size: 0.90rem;
-  font-weight: 400;
-  white-space: normal;
-}
-
-/* Botão de fechamento */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-column h3 {
-    border: none;
-  }
-
-  .footer-logo img {
-    margin-bottom: 20px;
-  }
 }
