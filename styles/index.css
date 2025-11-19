@@ -11,7 +11,7 @@
 .titulos_containers h2 {
   font-size: 32px;
   font-weight: 700;
-  max-width: 60vw;
+  max-width: 55vw;
   color: var(--tertiary-color);
 }
 
@@ -63,7 +63,7 @@ header ul {
 header ul li {
   position: relative;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 25px;
 }
 
 header ul li::after {
@@ -292,6 +292,15 @@ main .containers {
   padding: 2.5rem;
 }
 
+.conteudos-projeto h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.conteudos-projeto .left-box h2 {
+  margin-bottom: 40px;
+}
+
 .background-box {
   display: flex;
   justify-content: center;
@@ -308,11 +317,6 @@ main .containers {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.right-box h1 {
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 .right-box p {
@@ -334,6 +338,7 @@ main .containers {
   text-decoration: none;
   padding: 15px 30px;
   border-radius: 10px;
+  font-size: 1rem;
   font-weight: 600;
   transition: 0.5s ease;
   text-align: center;
@@ -364,12 +369,6 @@ main .containers {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 10px;
-}
-
-.left-box h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
 }
 
 .intro {
@@ -463,35 +462,40 @@ main .containers {
 
 .professores .box_professor {
   display: flex;
-  max-width: 1000px;
+  max-width: 900px;
+  background-color: #fff;
   color: var(--tertiary-color);
-  margin-bottom: 5rem;
+  padding: 1rem;
+  margin: 0 3rem 5rem 3rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  transition: .3s ease;
+}
+
+.professores .box_professor:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 16px rgba(93, 0, 255, 0.15);
 }
 
 .professores .box_professor .text_professor {
   padding: 1.5rem;
-  border-bottom-left-radius: 20px;
-}
-
-.professores .prof1 {
-  border-bottom: 1px solid var(--primary-color);
-  border-left: 1px solid var(--primary-color);
-}
-
-.professores .prof2 {
-  border-bottom: 1px solid var(--secondary-color);
-  border-left: 1px solid var(--secondary-color);
 }
 
 .professores .box_professor .text_professor h3 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   padding-bottom: .5rem;
+  background: linear-gradient(160deg, var(--primary-color) 35%, var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
 }
 
 .professores .box_professor .text_professor h4 {
   width: fit-content;
-  font-size: .85rem;
-  font-weight: 500;
+  font-size: .8rem;
+  font-weight: 600;
   padding: 4px 12px;
   border-radius: 50px;
   background-color: var(--quaternary-color);
@@ -511,13 +515,8 @@ main .containers {
 
 .professores .box_professor img {
   align-self: center;
-  width: 30%;
-  height: 30%;
-  transition: 0.7s ease;
-}
-
-.professores .box_professor img:hover {
-  transform: translateY(-10px);
+  width: 28%;
+  height: 28%;
 }
 
 /* Redes sociais dos professores */
@@ -528,14 +527,14 @@ main .containers {
 }
 
 .professores .social-icons .btn-sociais .bi {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: var(--tertiary-color);
   transition: 0.5s;
   margin-right: 9px;
 }
 
 .professores .social-icons .btn-sociais i:hover {
-  color: var(--quaternary-color);
+  color: var(--primary-color);
 }
 
 /* BOLSISTAS */
@@ -547,10 +546,6 @@ main .containers {
   background: linear-gradient(180deg, #00bfff72 0%, #00bfff30 60%);
 }
 
-.titulo-bolsistas h2 {
-  color: var(--primary-color);
-}
-
 .bolsistas .box {
   display: flex;
   justify-content: center;
@@ -560,7 +555,7 @@ main .containers {
 .bolsistas .box .box-equipe {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
   gap: 3rem;
 }
 
@@ -668,8 +663,7 @@ main .containers {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  width: 28rem;
-
+  max-width: 28rem;
 }
 
 .box-descricao-equipe .titulo-descricao-equipe h2 {
@@ -685,6 +679,7 @@ main .containers {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  min-width: 280px;
 }
 
 .conteudo-descricao-equipe .descricao-equipe h3 {
@@ -902,7 +897,7 @@ main .containers {
 }
 
 .box-icons-apoio img {
-  max-width: 12rem;
+  width: 12rem;
   height: auto;
   flex: 1 1 auto;
   object-fit: contain;
