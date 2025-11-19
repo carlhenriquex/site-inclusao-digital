@@ -29,15 +29,28 @@ const setaDireita = document.querySelector(".seta.direita");
 let indiceAtual = 3;
 const total = fotos.length;
 
-// Atualiza o destaque e a posição do carrossel
 function atualizarCarrossel() {
-  fotos.forEach((f, i) => f.classList.remove("destaque"));
+  fotos.forEach(f => f.classList.remove("destaque"));
   fotos[indiceAtual].classList.add("destaque");
 
-  // Calcula deslocamento para centralizar a imagem destaque
-    const gap = parseFloat(getComputedStyle(equipeFotos).gap) || 0;
-    const deslocamento = -indiceAtual * (fotos[0].offsetWidth + gap) + (equipeFotos.offsetWidth / 2 - 15) - (fotos[0].offsetWidth / 2);
-    equipeFotos.style.transform = `translateX(${deslocamento}px)`;
+  const gap = parseFloat(getComputedStyle(equipeFotos).gap) || 0;
+
+  // --- SOMA A LARGURA REAL DE TODAS AS IMAGENS ANTERIORES ---
+  let larguraAntes = 0;
+  for (let i = 0; i < indiceAtual; i++) {
+    larguraAntes += fotos[i].offsetWidth + gap;
+  }
+
+  // --- LARGURA DA IMAGEM ATUAL ---
+  const larguraAtual = fotos[indiceAtual].offsetWidth;
+
+  // --- CALCULA O CENTRO DO CONTÊINER ---
+  const centroContainer = equipeFotos.offsetWidth / 2;
+
+  // --- CALCULA O DESLOCAMENTO FINAL ---
+  const deslocamento = -(larguraAntes) + (centroContainer - larguraAtual / 2);
+
+  equipeFotos.style.transform = `translateX(${deslocamento}px)`;
 }
 
 // Botões
@@ -57,4 +70,3 @@ window.addEventListener("resize", atualizarCarrossel);
 
 
 // === ===
-
