@@ -3,16 +3,19 @@
 @media (max-width: 1200px) {
 
     .flex ul li {
-    margin: 0 11px;
+        margin: 0 11px;
     }
 
     .background-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    padding: 40px;
-    gap: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .background-box .right-box {
+        width: 100%;
+        gap: 2rem;
     }
 
     .bolsistas .box {
@@ -22,14 +25,51 @@
         gap: 1rem;
     }
 
+    .usuarios-lista {
+        display: flex;
+        align-items: center;
+    }
+
+    .usuarios-lista img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-left: -12px;
+        object-fit: cover;
+        border: 2px solid #fff;
+        cursor: pointer;
+    }
+
+    .icon-capelo {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+    }
+
     .box-saiba-mais .texto-blocos {
         font-size: 1rem;
     }
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
+    /* Titulos */
+    .titulos_containers {
+        margin-bottom: 4rem;
+    }
+
+    .titulos_containers h2 {
+        font-size: 25px;
+        font-weight: 700;
+        max-width: 70vw;
+    }
+
+    .section-badge {
+        font-size: 13px;
+    }
+
+    /* Header */
     .flex .desktop-menu {
         display: none;
     }
@@ -38,30 +78,165 @@
         display: block;
     }
 
+    /* Banner */
+    .banner {
+        min-height: 32rem;
+    }
+
+    .banner .text-banner h1 {
+        font-size: 1.4rem;
+    }
+
+    .banner .text-banner p {
+        font-size: .65rem;
+        max-width: 90%;
+    }
+
+    main .containers {
+        min-height: 15rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    /* conteudos gerados do projeto */
     .conteudos-projeto {
         flex-direction: column;
     }
 
-    .left-box {
-    width: 100%;
+    .background-box {
+        gap: 20px;
     }
 
-    .background-box .right-box {
+    .left-box {
         width: 100%;
+    }
+
+    .left-box h3 {
+        font-size: .8rem;
+        margin-bottom: 5px;
+    }
+
+    .conteudos-projeto h2 {
+        font-size: 1.7rem;
+    }
+
+    .conteudos-projeto .left-box h2 {
+        margin-bottom: 25px;
+    }
+
+    .features {
+        gap: 25px;
+    }
+
+    .features ul li {
+        padding: 8px;
+        margin-bottom: 15px;
+        font-size: .7rem;
+    }
+
+    .right-box {
+        padding: 5px;
+    }
+  
+    .right-box p {
+        font-size: .8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border-radius: 7px;
+        font-size: .8rem;
+    }
+
+    /* seção dos professores */
+    .professores .box_professor {
+        flex-direction: column;
+        max-width: 900px;
+        padding: 1rem;
+        margin: 0 3rem 5rem 3rem;
+    }
+
+
+    .professores .box_professor .text_professor p {
+        font-size: .8rem;
+        max-width: 100%;
+    }
+    
+    .professores .box_professor img{
+        order: -1;
+    }
+       
+    /* seção dos bolsistas */
+    .bolsistas .box .box-equipe {
+        max-width: 400px;
+        gap: 3rem;
+    }
+
+    .foto-container.destaque .foto {
+        width: 150px;
+        height: 150px;
+    }
+
+    .foto-container.destaque .nome-integrante {
+        font-size: .75rem;
+    }
+
+    .foto {
+        width: 110px;
+        height: 110px;
+    }
+
+    .box .box-descricao-equipe {
         gap: 2rem;
     }
 
+    .box-descricao-equipe .titulo-descricao-equipe h2 {
+        font-size: 1rem;
+    }
+
+    .box-descricao-equipe .conteudo-descricao-equipe {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .conteudo-descricao-equipe .descricao-equipe h3 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-descricao-equipe .descricao-equipe h4 {
+        font-size: .7rem;
+    }
+
     .blocos-usuarios-container {
-    flex-direction: column;
-    text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .texto-blocos {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.2rem;
     }
 
+    /* Apoiadores */
+    .box-icons-apoio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .box-icons-apoio img {
+        width: 9rem;
+    }
+
+    .box-icons-apoio .img_ete {
+        width: 6.5rem;
+    }
+
+    /* Rodape */
     .footer-container {
     flex-direction: column;
     align-items: center;
@@ -74,7 +249,7 @@
 
     .footer-logo img {
     margin-bottom: 20px;
-    } 
+    }
 }
 
 @media (max-width: 768px) {
