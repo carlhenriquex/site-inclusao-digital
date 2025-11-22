@@ -2,6 +2,10 @@
 
 @media (max-width: 1200px) {
 
+    header ul {
+        font-size: 12px;
+    }
+
     .flex ul li {
         margin: 0 11px;
     }
