@@ -12,7 +12,6 @@
         justify-content: center;
     }
 
-
     .background-box .right-box {
         width: 100%;
         gap: 2rem;
@@ -60,16 +59,19 @@
     }
 
     .titulos_containers h2 {
-        font-size: 25px;
-        font-weight: 700;
+        font-size: 1.6rem;
         max-width: 70vw;
     }
 
     .section-badge {
-        font-size: 13px;
+        font-size: .8rem;
     }
 
-    /* Header */
+    /* Header */    
+    header ul li::after {
+        display: none;
+    }
+
     .flex .desktop-menu {
         display: none;
     }
@@ -80,6 +82,7 @@
 
     /* Banner */
     .banner {
+        padding: 3rem;
         min-height: 32rem;
     }
 
@@ -101,6 +104,7 @@
     /* conteudos gerados do projeto */
     .conteudos-projeto {
         flex-direction: column;
+        padding: 4%;
     }
 
     .background-box {
@@ -112,7 +116,7 @@
     }
 
     .left-box h3 {
-        font-size: .8rem;
+        font-size: .7rem;
         margin-bottom: 5px;
     }
 
@@ -121,7 +125,7 @@
     }
 
     .conteudos-projeto .left-box h2 {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .features {
@@ -130,8 +134,8 @@
 
     .features ul li {
         padding: 8px;
-        margin-bottom: 15px;
-        font-size: .7rem;
+        margin-bottom: 10px;
+        font-size: .75rem;
     }
 
     .right-box {
@@ -155,7 +159,10 @@
         padding: 1rem;
         margin: 0 3rem 5rem 3rem;
     }
-
+   
+    .professores .box_professor .text_professor {
+        padding: .7rem;
+    }
 
     .professores .box_professor .text_professor p {
         font-size: .8rem;
@@ -211,13 +218,7 @@
         flex-direction: column;
         text-align: center;
     }
-
-    .texto-blocos {
-        text-align: center;
-        margin-top: 1rem;
-        font-size: 1.2rem;
-    }
-
+    
     /* Apoiadores */
     .box-icons-apoio {
         display: flex;
@@ -252,17 +253,264 @@
     }
 }
 
-@media (max-width: 768px) {
 
-    .equipe-fotos {
-    gap: 1rem;
+@media (max-width: 570px) {
+
+    /* Titulos */
+    .titulos_containers {
+        margin-bottom: 1rem;
     }
+
+    .titulos_containers h2 {
+        font-size: 1.2rem;
+        max-width: 90vw;
+    }
+
+    .section-badge {
+        font-size: .5rem;
+    }
+
+    /* Header */
+    header a img {
+        width: 7rem;
+    }
+
+    .icon-menu button {
+        font-size: 1.6rem;
+    }
+
+    .mobile-menu ul li .item-mobile {
+        font-size: .8rem;
+    }
+
+    /* Banner */
+    .banner {
+        flex-direction: column;
+        gap: 2rem;
+        min-height: 28rem;
+        padding: 1rem;
+    }
+
+    .banner .text-banner h1 {
+        font-size: 1.3rem;
+    }
+
+    .banner .text-banner p {
+        font-size: .6rem;
+    }
+
+    main .containers {
+        min-height: 12rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Artigos */
+    .artigos-relacionados-section {
+        margin: 80px auto;
+        padding: 0 .4rem;
+    }
+
+    /* Conteudos gerados */
+    .conteudos-projeto h2 {
+        font-size: 1.2rem;
+    }
+
+    .background-box {
+        padding: 1.5rem 3%;
+    }
+
+    .features {
+        gap: 10px;
+    }
+
+    .features ul li {
+        padding: 6px;
+        margin-bottom: 10px;
+        font-size: .6rem;
+    }
+
+    .features li::after {
+        width: 160px;
+        font-size: .6rem;
+    }
+
+    .right-box {
+        padding: 0;
+    }
+  
+    .right-box p {
+        font-size: .7rem;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        border-radius: 7px;
+        font-size: .7rem;
+    }
+
+    /* seção dos professores */
+    .professores .box_professor {
+        max-width: 900px;
+        padding: .5rem;
+        margin: 0 1rem 3.5rem 1rem;
+    }
+
+    .professores .box_professor .text_professor h3 {
+        font-size: 1.1rem;
+    }
+
+    .professores .box_professor .text_professor h4 {
+        font-size: .7rem;
+    }
+
+    .professores .box_professor .text_professor p {
+        font-size: .6rem;
+    }
+
+    .professores .social-icons .btn-sociais .bi {
+        font-size: 1.4rem;
+    }
+       
+    /* seção dos bolsistas */
+
+    .bolsistas {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    .bolsistas .box .box-equipe {
+        max-width: 320px;
+        gap: 0;
+    }
+
+    .bolsistas .box .box-equipe h2 {
+        font-size: 1.3rem;
+    }
+
+    .foto-container.destaque .foto {
+        width: 110px;
+        height: 110px;
+    }
+
+    .foto-container.destaque .nome-integrante {
+        font-size: .6rem;
+    }
+
     .foto {
-    width: 100px;
-    height: 100px;
+        width: 85px;
+        height: 85px;
     }
-    .foto.destaque {
-    width: 140px;
-    height: 140px;
+
+    .box .box-descricao-equipe {
+        gap: 2rem;
+    }
+
+    .box-descricao-equipe .titulo-descricao-equipe h2 {
+        font-size: .8rem;
+    }
+
+    .box-descricao-equipe .conteudo-descricao-equipe {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .conteudo-descricao-equipe .descricao-equipe h3 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo-descricao-equipe .descricao-equipe h4 {
+        font-size: .6rem;
+    }
+
+    .box-saiba-mais .texto-blocos {
+        margin-top: 1rem;
+        font-size: .7rem;
+    }
+    
+    .blocos-usuarios {
+        width: 100%;
+        padding: 3.5rem 1rem;
+        margin-top: 8rem;
+    }
+
+    .blocos-usuarios-container {
+        max-width: 1200px;
+        gap: 1rem;
+    }
+
+    .usuarios-lista img {
+        width: 45px;
+        height: 45px;
+        border: 2px solid #fff;
+    }
+
+    .icon-capelo {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+    }
+    
+    .box-saiba-mais a {
+        font-size: .9rem;
+    }
+
+    /* depoimentos */    
+    .tech-profile span {
+        font-size: .73rem;
+    }
+
+    .tech-text {
+        font-size: .7rem;
+    }
+    
+    /* Apoiadores */
+    .box-icons-apoio {
+        gap: .7rem;
+    }
+
+    .box-icons-apoio img {
+        width: 5rem;
+    }
+
+    .box-icons-apoio .img_ete {
+        width: 3.2rem;
+    }
+
+    /* RODAPÉ */
+    .footer-column .btn-sociais .bi {
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        padding: 30px 8% 20px;
+    }
+
+    .footer-container {
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo img {
+        width: 140px;
+    }
+
+    .footer-column h3 {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .usuarios-lista img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-capelo {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
 }

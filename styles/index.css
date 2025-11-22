@@ -9,14 +9,14 @@
 }
 
 .titulos_containers h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   max-width: 55vw;
   color: var(--tertiary-color);
 }
 
 .section-badge {
-  font-size: 14px;
+  font-size: .9rem;
   font-weight: 600;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -25,6 +25,14 @@
 
 .titulos_containers span {
   color: var(--quaternary-color);
+}
+
+.tech-line {
+  width: 80px;
+  height: 3px;
+  background-color: var(--tertiary-color);
+  margin: 10px auto 40px auto;
+  border-radius: 4px;
 }
 
 /* CABEÇALHO COM LOGO E MENU DE NAVEGAÇÃO */
@@ -158,7 +166,7 @@ main .containers {
 
 .banner {
   width: 100%;
-  min-height: 42rem;
+  min-height: 38rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,6 +189,7 @@ main .containers {
 
 .banner img {
   width: 50%;
+  min-width: 300px;
 }
 
 /* ARTIGOS */
@@ -210,7 +219,7 @@ main .containers {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  width: 325px;
+  width: 310px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.2s ease;
 }
@@ -305,7 +314,7 @@ main .containers {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 40px;
+  padding: 3rem 3%;
   gap: 40px;
   background: linear-gradient(180deg,rgb(79, 32, 172) 35%, rgba(122, 233, 255, 1) 100%);
   border-radius: 30px;
@@ -329,6 +338,7 @@ main .containers {
 .right-box .box-buttons{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: .7rem;
 }
 
@@ -397,10 +407,15 @@ main .containers {
   margin-bottom: 15px;
   font-size: .9rem;
   font-weight: 600;
+  white-space: nowrap;
   gap: 10px;
   cursor: pointer;
   color: var(--text-color);
   transition: background 0.5s ease;
+}
+
+.features ul li[data-info] {
+  white-space: wrap;
 }
 
 /* box balao */
@@ -410,11 +425,11 @@ main .containers {
   left: 50%;
   top: -10px;
   transform: translate(-50%, -100%);
-  width: 260px;
+  width: 250px;
   background: var(--quaternary-color);
   padding: 12px 8px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: .9rem;
   font-weight: 500;
   opacity: 0;
   pointer-events: none;
@@ -519,7 +534,6 @@ main .containers {
   height: 28%;
 }
 
-/* Redes sociais dos professores */
 .professores .social-icons {
   margin-top: 1rem;
   display: flex;
@@ -626,7 +640,7 @@ main .containers {
   left: 0;
   background: linear-gradient(160deg, var(--primary-color) 40%, var(--secondary-color));
   font-size: .6rem;
-  padding: 3px 9px;
+  padding: 3px 7px;
   border-radius: 20px;
   white-space: nowrap;
 }
@@ -663,7 +677,7 @@ main .containers {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: 28rem;
+  max-width: 22rem;
 }
 
 .box-descricao-equipe .titulo-descricao-equipe h2 {
@@ -770,7 +784,8 @@ main .containers {
 }
 
 .texto-blocos {
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
@@ -819,21 +834,13 @@ main .containers {
   padding-top: 7rem;
 }
 
-.tech-line {
-  width: 80px;
-  height: 3px;
-  background-color: var(--tertiary-color);
-  margin: 10px auto 40px auto;
-  border-radius: 4px;
-}
-
 .tech-grid {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .tech-card {
@@ -860,13 +867,12 @@ main .containers {
 }
 
 .tech-profile span {
-  font-size: 14px;
+  font-size: .9rem;
 }
 
 .tech-text {
-  font-size: 15px;
+  font-size: 1rem;
   color: #6e6e6e;
-  
   line-height: 1.6;
   margin-top: 5px;
 }
@@ -953,14 +959,11 @@ main .containers {
   padding-bottom: 30px;
 }
 
-/* Logo */
 .footer-logo img {
   width: 180px;
 }
 
-/* Colunas */
 .footer-column h3 {
-  /* color: #ffec00; */
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.2rem;
@@ -1000,7 +1003,6 @@ main .containers {
   width: 100%;
 }
 
-/* Rodapé inferior */
 .footer-bottom {
   text-align: center;
   margin-top: 25px;
